@@ -1,4 +1,4 @@
-import crates from '../../'
+const crates = require('../../')
 
 console.info(crates('Hello ', 'World!!!'))
 
