@@ -10,13 +10,13 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@babel/code-frame@^7.0.0-beta.35":
+"@babel/code-frame@7.0.0-beta.40", "@babel/code-frame@^7.0.0-beta.35":
   version "7.0.0-beta.40"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0-beta.40.tgz#37e2b0cf7c56026b4b21d3927cadf81adec32ac6"
   dependencies:
     "@babel/highlight" "7.0.0-beta.40"
 
-"@babel/generator@^7.0.0-beta.40":
+"@babel/generator@7.0.0-beta.40", "@babel/generator@^7.0.0-beta.40":
   version "7.0.0-beta.40"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.0.0-beta.40.tgz#ab61f9556f4f71dbd1138949c795bb9a21e302ea"
   dependencies:
@@ -34,11 +34,25 @@
     "@babel/template" "7.0.0-beta.36"
     "@babel/types" "7.0.0-beta.36"
 
+"@babel/helper-function-name@7.0.0-beta.40":
+  version "7.0.0-beta.40"
+  resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.0.0-beta.40.tgz#9d033341ab16517f40d43a73f2d81fc431ccd7b6"
+  dependencies:
+    "@babel/helper-get-function-arity" "7.0.0-beta.40"
+    "@babel/template" "7.0.0-beta.40"
+    "@babel/types" "7.0.0-beta.40"
+
 "@babel/helper-get-function-arity@7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/helper-get-function-arity/-/helper-get-function-arity-7.0.0-beta.36.tgz#f5383bac9a96b274828b10d98900e84ee43e32b8"
   dependencies:
     "@babel/types" "7.0.0-beta.36"
+
+"@babel/helper-get-function-arity@7.0.0-beta.40":
+  version "7.0.0-beta.40"
+  resolved "https://registry.yarnpkg.com/@babel/helper-get-function-arity/-/helper-get-function-arity-7.0.0-beta.40.tgz#ac0419cf067b0ec16453e1274f03878195791c6e"
+  dependencies:
+    "@babel/types" "7.0.0-beta.40"
 
 "@babel/highlight@7.0.0-beta.40":
   version "7.0.0-beta.40"
@@ -57,6 +71,15 @@
     babylon "7.0.0-beta.36"
     lodash "^4.2.0"
 
+"@babel/template@7.0.0-beta.40":
+  version "7.0.0-beta.40"
+  resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0-beta.40.tgz#034988c6424eb5c3268fe6a608626de1f4410fc8"
+  dependencies:
+    "@babel/code-frame" "7.0.0-beta.40"
+    "@babel/types" "7.0.0-beta.40"
+    babylon "7.0.0-beta.40"
+    lodash "^4.2.0"
+
 "@babel/traverse@7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.0.0-beta.36.tgz#1dc6f8750e89b6b979de5fe44aa993b1a2192261"
@@ -70,6 +93,20 @@
     invariant "^2.2.0"
     lodash "^4.2.0"
 
+"@babel/traverse@^7.0.0-beta.40":
+  version "7.0.0-beta.40"
+  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.0.0-beta.40.tgz#d140e449b2e093ef9fe1a2eecc28421ffb4e521e"
+  dependencies:
+    "@babel/code-frame" "7.0.0-beta.40"
+    "@babel/generator" "7.0.0-beta.40"
+    "@babel/helper-function-name" "7.0.0-beta.40"
+    "@babel/types" "7.0.0-beta.40"
+    babylon "7.0.0-beta.40"
+    debug "^3.0.1"
+    globals "^11.1.0"
+    invariant "^2.2.0"
+    lodash "^4.2.0"
+
 "@babel/types@7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.36.tgz#64f2004353de42adb72f9ebb4665fc35b5499d23"
@@ -78,7 +115,7 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@babel/types@7.0.0-beta.40":
+"@babel/types@7.0.0-beta.40", "@babel/types@^7.0.0-beta.40":
   version "7.0.0-beta.40"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.40.tgz#25c3d7aae14126abe05fcb098c65a66b6d6b8c14"
   dependencies:
@@ -786,6 +823,10 @@ babel-types@^6.18.0, babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26
 babylon@7.0.0-beta.36:
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-7.0.0-beta.36.tgz#3a3683ba6a9a1e02b0aa507c8e63435e39305b9e"
+
+babylon@7.0.0-beta.40:
+  version "7.0.0-beta.40"
+  resolved "https://registry.yarnpkg.com/babylon/-/babylon-7.0.0-beta.40.tgz#91fc8cd56d5eb98b28e6fde41045f2957779940a"
 
 babylon@^6.18.0:
   version "6.18.0"
@@ -2665,6 +2706,10 @@ locate-path@^2.0.0:
 lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
+
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
