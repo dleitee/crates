@@ -1,6 +1,7 @@
 import crates from '../../'
 
-console.info(_('Hello ', 'World!!!'))
+console.info(crates('Hello ', 'World!!!'))
 
 const test = 'hello {0}'
-console.info(_(test, 'world!!!'))
+const test1 = test
+console.info(crates(test1, 'world!!!'))

@@ -1,7 +1,9 @@
 import fs from 'fs'
 import path from 'path'
 
-import parser, { getModuleIdentifier } from '../src/parser'
+import { base64decode } from 'strman'
+
+import parser from '../src/parser'
 
 describe('run parser on vanilla-module file', () => {
   let file = null
@@ -12,7 +14,20 @@ describe('run parser on vanilla-module file', () => {
     })
   })
 
-  test('a', async () => {
-    const ast = await parser(file, { moduleName: '../../' })
+  test('to test, the translations must have 1 or more elements', async () => {
+    const translations = await parser(file, { moduleName: '../../' })
+    expect(translations.size).toBeGreaterThan(1)
+  })
+
+  test('parser function should return a map with strings to translate', async () => {
+    const translations = await parser(file, { moduleName: '../../' })
+    expect(translations).toBeInstanceOf(Map)
+  })
+
+  test("the map's keys must be a base64 of value", async () => {
+    const translations = await parser(file, { moduleName: '../../' })
+    translations.forEach((value, key) => {
+      expect(base64decode(key)).toEqual(value)
+    })
   })
 })

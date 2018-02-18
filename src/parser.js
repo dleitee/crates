@@ -1,4 +1,4 @@
-import { getModuleIdentifier, getASTFromCode } from './utils/ast'
+import { getModuleIdentifier, getASTFromCode, getTranslationsMap } from './utils/ast'
 
 const parser = async (code, options = {}) => {
   const defaultOptions = {
@@ -10,6 +10,7 @@ const parser = async (code, options = {}) => {
     sourceType: defaultOptions.sourceType,
   })
   const moduleIdentifier = await getModuleIdentifier(ast, defaultOptions.moduleName)
+  return getTranslationsMap(ast, moduleIdentifier)
 }
 
 export default parser
