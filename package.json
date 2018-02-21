@@ -1,10 +1,10 @@
 {
   "name": "crates",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A pretty simple and efficient internationalization library.",
   "main": "index.js",
   "bin": {
-    "crates": "./src/cli.js"
+    "crates": "cli.js"
   },
   "scripts": {
     "test": "jest",
@@ -27,10 +27,10 @@
   },
   "homepage": "https://github.com/dleitee/crates#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.2.2",
-    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
@@ -49,6 +49,7 @@
     "@babel/generator": "^7.0.0-beta.40",
     "@babel/traverse": "^7.0.0-beta.40",
     "@babel/types": "^7.0.0-beta.40",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babylon": "^6.18.0",
     "caporal": "^0.9.0",
     "lodash.get": "^4.4.2",

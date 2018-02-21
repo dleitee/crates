@@ -6,7 +6,7 @@ const glob = require('glob')
 const generator = require('./generator').default
 
 prog
-  .version('0.0.1')
+  .version('0.0.2')
   .help('A dynamic library to internationalize your things.')
   .command('create', 'Create translations files.')
   .option(

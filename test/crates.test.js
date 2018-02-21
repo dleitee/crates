@@ -1,4 +1,4 @@
-import crates from '../'
+import crates from '../src'
 
 describe('crates function behavior', () => {
   test('should return Hello World!!!', () => {
