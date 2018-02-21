@@ -53,10 +53,14 @@ const generator = async (files = [], languages = [], options = {}) => {
     path: './translations',
     ...options,
   }
-  const filesMapped = await Promise.all(files.map(async file => parser(readFile(file), options)))
-  const allTranslations = mergeMaps(filesMapped)
-  createFolder(defaultOptions.path)
-  languages.forEach(value => generateCodeToLanguage(allTranslations, value, defaultOptions))
+  try {
+    const filesMapped = await Promise.all(files.map(async file => parser(readFile(file), options)))
+    const allTranslations = mergeMaps(filesMapped)
+    createFolder(defaultOptions.path)
+    languages.forEach(value => generateCodeToLanguage(allTranslations, value, defaultOptions))
+  } catch (error) {
+    console.error('Generator:', error)
+  }
 }
 
 export default generator

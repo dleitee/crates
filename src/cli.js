@@ -16,14 +16,19 @@ prog
     '**/*.js'
   )
   .option('-l, --lang <languages>', 'Languages to translate.', prog.LIST)
+  .option('-e, --exclude <pattern>', 'Exclude files with pattern')
   .action(async (args, options, logger) => {
-    await glob(options.glob, {}, async (err, files) => {
-      if (err) {
-        logger.info(err)
-        return
-      }
-      await generator(files, options.lang)
-    })
+    try {
+      await glob(options.glob, {}, async (err, files) => {
+        if (err) {
+          logger.info(err)
+          return
+        }
+        await generator(files, options.lang)
+      })
+    } catch (error) {
+      console.error('CLI:', error)
+    }
   })
 
 prog.parse(process.argv)

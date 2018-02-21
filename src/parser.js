@@ -11,8 +11,13 @@ const parser = async (code, options = {}) => {
     sourceType: defaultOptions.sourceType,
     plugins: ['jsx', 'flow', 'flowComments', 'typescript', ...defaultOptions.plugins],
   })
-  const moduleIdentifier = await getModuleIdentifier(ast, defaultOptions.moduleName)
-  return getTranslationsMap(ast, moduleIdentifier)
+  try {
+    const moduleIdentifier = await getModuleIdentifier(ast, defaultOptions.moduleName)
+    return getTranslationsMap(ast, moduleIdentifier)
+  } catch (error) {
+    console.error('Parser:', error)
+    return new Map()
+  }
 }
 
 export default parser
