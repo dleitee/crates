@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "A pretty simple and efficient internationalization library.",
   "main": "index.js",
+  "bin": {
+    "crates": "./src/cli.js"
+  },
   "scripts": {
     "test": "jest",
     "debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
@@ -27,7 +30,10 @@
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.2.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.18.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -36,15 +42,19 @@
     "husky": "^0.14.3",
     "jest": "^22.3.0",
     "lint-staged": "^6.1.1",
-    "prettier": "^1.10.2"
+    "prettier": "^1.10.2",
+    "webpack": "^3.11.0"
   },
   "dependencies": {
     "@babel/generator": "^7.0.0-beta.40",
     "@babel/traverse": "^7.0.0-beta.40",
     "@babel/types": "^7.0.0-beta.40",
     "babylon": "^6.18.0",
+    "caporal": "^0.9.0",
     "lodash.get": "^4.4.2",
+    "node-glob": "^1.2.0",
     "rimraf": "^2.6.2",
-    "strman": "^2.0.0"
+    "strman": "^2.0.0",
+    "strman.format": "^2.0.0"
   }
 }

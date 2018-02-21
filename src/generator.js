@@ -22,7 +22,7 @@ const getCurrentJSON = (generatedFileName, options = {}) => {
   const filename = path.resolve(process.cwd(), options.path, generatedFileName)
   if (fs.existsSync(filename)) {
     // eslint-disable-next-line
-    return require(filename).default
+    return require(filename)
   }
   return {}
 }
@@ -43,7 +43,7 @@ const generateCodeToLanguage = (translationMap, language, options = {}) => {
     }
     object = { ...object, ...item }
   })
-  const code = `export default ${JSON.stringify(object)}`
+  const code = `module.exports = ${JSON.stringify(object)}`
   const ast = parse(code, { sourceType: 'module' })
   writeFile(path.resolve(options.path, generatedFileName), generateCode(ast).code)
 }
