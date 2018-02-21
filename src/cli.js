@@ -16,10 +16,10 @@ prog
     '**/*.js'
   )
   .option('-l, --lang <languages>', 'Languages to translate.', prog.LIST)
-  .option('-e, --exclude <pattern>', 'Exclude files with pattern')
+  .option('-e, --exclude <pattern>', 'Exclude files with pattern', null, 'node_modules|.git')
   .action(async (args, options, logger) => {
     try {
-      await glob(options.glob, {}, async (err, files) => {
+      await glob(options.glob, { dot: true, ignore: options.exclude }, async (err, files) => {
         if (err) {
           logger.info(err)
           return
