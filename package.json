@@ -1,6 +1,6 @@
 {
   "name": "crates",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A pretty simple and efficient internationalization library.",
   "main": "index.js",
   "bin": {
