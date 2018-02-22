@@ -9,7 +9,22 @@ const parser = async (code, options = {}) => {
   }
   const ast = getASTFromCode(code, {
     sourceType: defaultOptions.sourceType,
-    plugins: ['jsx', 'flow', 'flowComments', 'typescript', ...defaultOptions.plugins],
+    plugins: [
+      'doExpressions',
+      'objectRestSpread',
+      'decorators',
+      'decorators2',
+      'classProperties',
+      'exportDefaultFrom',
+      'exportNamespaceFrom',
+      'asyncGenerators',
+      'dynamicImport',
+      'jsx',
+      'flow',
+      'flowComments',
+      'typescript',
+      ...defaultOptions.plugins,
+    ],
   })
   try {
     const moduleIdentifier = await getModuleIdentifier(ast, defaultOptions.moduleName)
