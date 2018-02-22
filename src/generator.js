@@ -56,7 +56,8 @@ const generator = async (files = [], languages = [], options = {}) => {
   try {
     const filesMapped = await Promise.all(
       files.map(async file => {
-        console.info('generator:', file, options)
+        console.info('compiling file:', file, options)
+        console.info('\x1Bc')
         return parser(readFile(file), options)
       })
     )
