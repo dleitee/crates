@@ -1,5 +1,4 @@
 import { parse } from 'babylon'
-import { base64encode } from 'strman'
 import traverse from '@babel/traverse'
 import * as types from '@babel/types'
 import _get from 'lodash.get'
@@ -66,14 +65,14 @@ export const getTranslationsMap = (ast, identifier) => {
       }
       const argument = _get(path, 'node.arguments[0]')
       if (types.isStringLiteral(argument)) {
-        translations.set(base64encode(argument.value), argument.value)
+        translations.set(argument.value, argument.value)
         return
       }
       const translation = getTranslationValueFromIdentifier(
         _get(path, `scope.bindings.${argument.name}.path`)
       )
       if (translation) {
-        translations.set(base64encode(translation), translation)
+        translations.set(translation, translation)
       }
     },
   })

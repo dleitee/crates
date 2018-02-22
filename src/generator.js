@@ -31,21 +31,16 @@ const mergeMaps = filesMapped =>
   filesMapped.reduce((previous, current) => new Map([...previous, ...current]), new Map())
 
 const generateCodeToLanguage = (translationMap, language, options = {}) => {
-  const generatedFileName = `translation.${language}.js`
+  const generatedFileName = `translation.${language}.json`
   const json = getCurrentJSON(generatedFileName, options)
   let object = {}
   translationMap.forEach((value, key) => {
     const item = {
-      [key]: {
-        phrase: value,
-        translation: _get(json, `${key}.translation`, ''),
-      },
+      [key]: _get(json, key, key),
     }
     object = { ...object, ...item }
   })
-  const code = `module.exports = ${JSON.stringify(object)}`
-  const ast = parse(code, { sourceType: 'module' })
-  writeFile(path.resolve(options.path, generatedFileName), generateCode(ast).code)
+  writeFile(path.resolve(options.path, generatedFileName), JSON.stringify(object, null, '\t'))
 }
 
 const generator = async (files = [], languages = [], options = {}) => {

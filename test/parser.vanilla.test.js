@@ -1,8 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 
-import { base64decode } from 'strman'
-
 import parser from '../src/parser'
 
 describe('run parser on vanilla-module file', () => {
@@ -24,10 +22,10 @@ describe('run parser on vanilla-module file', () => {
     expect(translations).toBeInstanceOf(Map)
   })
 
-  test("the map's keys must be a base64 of value", async () => {
+  test("the map's keys must be equal to value", async () => {
     const translations = await parser(file, { moduleName: '../../' })
     translations.forEach((value, key) => {
-      expect(base64decode(key)).toEqual(value)
+      expect(key).toEqual(value)
     })
   })
 })
@@ -51,10 +49,10 @@ describe('run parser on vanilla-script file', () => {
     expect(translations).toBeInstanceOf(Map)
   })
 
-  test("the map's keys must be a base64 of value", async () => {
+  test("the map's keys must be equal to value", async () => {
     const translations = await parser(file, { moduleName: '../../' })
     translations.forEach((value, key) => {
-      expect(base64decode(key)).toEqual(value)
+      expect(key).toEqual(value)
     })
   })
 })

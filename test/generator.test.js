@@ -23,7 +23,11 @@ describe('run generator through the files', () => {
 
     const trueDir = path.resolve(process.cwd(), dir)
     const filesOnDir = fs.readdirSync(trueDir)
-    expect(filesOnDir).toEqual(['translation.en.js', 'translation.es.js', 'translation.pt.js'])
+    expect(filesOnDir).toEqual([
+      'translation.en.json',
+      'translation.es.json',
+      'translation.pt.json',
+    ])
     rimraf(trueDir, () => {})
   })
 })
