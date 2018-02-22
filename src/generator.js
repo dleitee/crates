@@ -56,9 +56,12 @@ const generator = async (files = [], languages = [], options = {}) => {
   try {
     const filesMapped = await Promise.all(
       files.map(async file => {
-        console.info('compiling file:', file, options)
-        console.info('\x1Bc')
-        return parser(readFile(file), options)
+        process.stdout.write('compiling file:')
+        process.stdout.write(file)
+        const parsedFile = parser(readFile(file), options)
+        process.stdout.clearLine()
+        process.stdout.cursorTo(0)
+        return parsedFile
       })
     )
     const allTranslations = mergeMaps(filesMapped)
