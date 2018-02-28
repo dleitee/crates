@@ -7,7 +7,7 @@ const generator = require('./generator').default
 
 prog
   .version('0.0.2')
-  .help('A dynamic library to internationalize your things.')
+  .help('A tool to generate your locale files compatible with i18n.')
   .command('create', 'Create translations files.')
   .option(
     '-g, --glob <pattern>',
