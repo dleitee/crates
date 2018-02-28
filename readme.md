@@ -63,7 +63,7 @@ drwxr-xr-x  7 danieloliveira  staff   224B Feb 20 21:56 ..
 These files are compatible with those plugins:
 
 Plugin | Link
-**_ | _**
+-- | --
 **i18n-webpack-plugin** | [Github](https://github.com/webpack-contrib/i18n-webpack-plugin)
 **rollup-plugin-i18n** | [Github](https://github.com/phamtm/rollup-plugin-i18n)
 **gulp-i18n** | [Github](https://github.com/ciclo-pe/gulp-i18n)
