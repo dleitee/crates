@@ -1,7 +1,7 @@
 {
   "name": "crates",
   "version": "0.0.9",
-  "description": "A pretty simple and efficient internationalization library.",
+  "description": "A tool to generate your locale files compatible with i18n.",
   "main": "index.js",
   "bin": {
     "crates": "cli.js"
