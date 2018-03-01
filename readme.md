@@ -64,6 +64,7 @@ These files are compatible with those plugins:
 
 Plugin | Link
 -- | --
+**i18next** | [Github](https://github.com/i18next/i18next)
 **i18n-webpack-plugin** | [Github](https://github.com/webpack-contrib/i18n-webpack-plugin)
 **rollup-plugin-i18n** | [Github](https://github.com/phamtm/rollup-plugin-i18n)
 **gulp-i18n** | [Github](https://github.com/ciclo-pe/gulp-i18n)
