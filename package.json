@@ -1,6 +1,6 @@
 {
   "name": "crates",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A tool to generate your locale files compatible with i18n.",
   "main": "index.js",
   "bin": {
