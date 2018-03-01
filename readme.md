@@ -56,7 +56,7 @@ $ l translations
 total 32
 drwxr-xr-x  6 danieloliveira  staff   192B Feb 22 08:35 .
 drwxr-xr-x  7 danieloliveira  staff   224B Feb 20 21:56 ..
--rw-r--r--  1 danieloliveira  staff   154B Feb 22 08:35 translation.en.json
+-rw-r--r--  1 danieloliveira  staff   154B Feb 22 08:35 translation.es.json
 -rw-r--r--  1 danieloliveira  staff   129B Feb 22 08:35 translation.pt.json
 ```
 
@@ -64,6 +64,7 @@ These files are compatible with those plugins:
 
 Plugin | Link
 -- | --
+**i18next** | [Github](https://github.com/i18next/i18next)
 **i18n-webpack-plugin** | [Github](https://github.com/webpack-contrib/i18n-webpack-plugin)
 **rollup-plugin-i18n** | [Github](https://github.com/phamtm/rollup-plugin-i18n)
 **gulp-i18n** | [Github](https://github.com/ciclo-pe/gulp-i18n)
