@@ -56,7 +56,7 @@ $ l translations
 total 32
 drwxr-xr-x  6 danieloliveira  staff   192B Feb 22 08:35 .
 drwxr-xr-x  7 danieloliveira  staff   224B Feb 20 21:56 ..
--rw-r--r--  1 danieloliveira  staff   154B Feb 22 08:35 translation.en.json
+-rw-r--r--  1 danieloliveira  staff   154B Feb 22 08:35 translation.es.json
 -rw-r--r--  1 danieloliveira  staff   129B Feb 22 08:35 translation.pt.json
 ```
 
