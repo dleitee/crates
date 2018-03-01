@@ -58,6 +58,11 @@ drwxr-xr-x  6 danieloliveira  staff   192B Feb 22 08:35 .
 drwxr-xr-x  7 danieloliveira  staff   224B Feb 20 21:56 ..
 -rw-r--r--  1 danieloliveira  staff   154B Feb 22 08:35 translation.es.json
 -rw-r--r--  1 danieloliveira  staff   129B Feb 22 08:35 translation.pt.json
+
+$ cat translations/translation.es.json
+{
+	"Hello World": "Hello World"
+}
 ```
 
 These files are compatible with those plugins:
