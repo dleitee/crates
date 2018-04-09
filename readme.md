@@ -46,7 +46,7 @@ That means the function by itself don't do anything, only returns its first argu
 But, after executing the CLI as shown below:
 
 ```bash
-$ ./node_modules/.bin/crates create --land 'es,pt' --glob '**/*.js'
+$ ./node_modules/.bin/crates create --lang 'es,pt' --glob '**/*.js'
 ```
 
 The library will create the `internationalization` files into the `/translations` directory.
@@ -83,7 +83,7 @@ Instead of use `./node_modules/.bin/crates` to execute the CLI, you can create a
 ```json
 {
   "scripts": {
-    "crates": "crates create --land 'es,pt' --glob '**/*.js"
+    "crates": "crates create --lang 'es,pt' --glob '**/*.js"
   }
 }
 ```
