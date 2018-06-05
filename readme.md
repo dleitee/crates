@@ -4,6 +4,8 @@
 
 # Crates
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dleitee/crates.svg)](https://greenkeeper.io/)
+
 Crates is a library that allows you to generate internationalization's files for any language you need using only a command.
 
 It's perfect for sites that needs be translated into another language, you only need call the **crates'** function adding the desired words and then execute the CLI command.
