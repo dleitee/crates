@@ -1,4 +1,4 @@
-const crates = require('../../')
+const crates = require('../../src')
 
 console.info(crates('Hello ', 'World!!!'))
 

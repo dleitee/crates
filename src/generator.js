@@ -1,8 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 
-import { parse } from 'babylon'
-import generateCode from '@babel/generator'
 import _get from 'lodash.get'
 
 import parser from './parser'

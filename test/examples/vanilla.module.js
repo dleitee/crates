@@ -1,4 +1,4 @@
-import crates from '../../'
+import crates from '../../src'
 
 console.info(crates('Hello ', 'World!!!'))
 
