@@ -1,4 +1,4 @@
-import crates from '../../'
+import crates from '../../src'
 
 const component = (
   <div>
