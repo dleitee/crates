@@ -3,7 +3,7 @@ import path from 'path'
 
 import parser from '../src/parser'
 
-describe('run parser on JSX file', () => {
+describe.only('run parser on JSX file', () => {
   let file = null
 
   beforeAll(() => {
@@ -12,7 +12,7 @@ describe('run parser on JSX file', () => {
     })
   })
 
-  test('to test, the translations must have 1 or more elements', async () => {
+  test.only('to test, the translations must have 1 or more elements', async () => {
     const translations = await parser(file, { moduleName: '../../' })
     expect(translations.size).toBeGreaterThan(1)
   })

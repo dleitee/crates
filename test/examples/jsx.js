@@ -1,9 +1,7 @@
-import crates from '../../'
-
 const component = (
   <div>
-    <span>{crates('Welcome')}</span>
-    <span>{crates('Bem Vindo')}</span>
+    <span>{__('Welcome')}</span>
+    <span>{__('Bem Vindo')}</span>
   </div>
 )
 

@@ -1,12 +1,12 @@
 <p align="center">
-<img src="./crates.jpg">
+  <img src="./crates.jpg">
 </p>
 
 # Crates
 
 Crates is a library that allows you to generate internationalization's files for any language you need using only a command.
 
-It's perfect for sites that needs be translated into another language, you only need call the **crates'** function adding the desired words and then execute the CLI command.
+It's perfect for sites that need to be translated into another language, you only need to call the **crates'** function adding the desired words and then execute the CLI command.
 
 The **crates'** function is used as a marker for the library and just returns the string passed as an argument.
 
@@ -15,7 +15,7 @@ The **crates'** function is used as a marker for the library and just returns th
 With npm:
 
 ```bash
-$ npm install --dev crates
+$ npm install --save crates
 ```
 
 With Yarn:
@@ -46,7 +46,7 @@ That means the function by itself don't do anything, only returns its first argu
 But, after executing the CLI as shown below:
 
 ```bash
-$ ./node_modules/.bin/crates create --lang 'es,pt' --glob '**/*.js'
+$ npx crates create --lang 'es,pt' --glob '**/*.js'
 ```
 
 The library will create the `internationalization` files into the `/translations` directory.
@@ -67,28 +67,14 @@ $ cat translations/translation.es.json
 
 These files are compatible with those plugins:
 
-Plugin | Link
--- | --
-**i18next** | [Github](https://github.com/i18next/i18next)
-**i18n-webpack-plugin** | [Github](https://github.com/webpack-contrib/i18n-webpack-plugin)
-**rollup-plugin-i18n** | [Github](https://github.com/phamtm/rollup-plugin-i18n)
-**gulp-i18n** | [Github](https://github.com/ciclo-pe/gulp-i18n)
+| Plugin                  | Link                                                             |
+| ----------------------- | ---------------------------------------------------------------- |
+| **i18next**             | [Github](https://github.com/i18next/i18next)                     |
+| **i18n-webpack-plugin** | [Github](https://github.com/webpack-contrib/i18n-webpack-plugin) |
+| **rollup-plugin-i18n**  | [Github](https://github.com/phamtm/rollup-plugin-i18n)           |
+| **gulp-i18n**           | [Github](https://github.com/ciclo-pe/gulp-i18n)                  |
 
 If you know some another plugin, please, let me know.
-
-## Tips
-
-Instead of use `./node_modules/.bin/crates` to execute the CLI, you can create a script into package.json file.
-
-```json
-{
-  "scripts": {
-    "crates": "crates create --lang 'es,pt' --glob '**/*.js"
-  }
-}
-```
-
-And then run with `npm run crates`.
 
 ## Contributing
 
