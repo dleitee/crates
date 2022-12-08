@@ -12,7 +12,7 @@
   "dependencies": {
     "crates": "^0.0.12",
     "ejs": "^2.6.1",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },
